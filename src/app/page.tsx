@@ -1,5 +1,6 @@
-import { PageContainer } from '@/app/_components/PageContainer/PageContainer'
 import { type Metadata } from 'next'
+
+import { PageContainer } from '@/app/_components/PageContainer/PageContainer'
 
 export const metadata: Metadata = {
   title: 'INIAD同窓会「INIALUM」',
