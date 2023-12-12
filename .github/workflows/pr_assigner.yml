@@ -9,6 +9,9 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     timeout-minutes: 1
+    permissions:
+      pull-requests: write
+      repository-projects: write
 
     steps:
       - run: gh pr edit "$NUMBER" --add-assignee "$ASSIGNEE"
