@@ -2,7 +2,7 @@ name: Pull Request Assigner
 
 on:
   pull_request:
-    types: [opened, unassigned]
+    types: [opened]
   workflow_dispatch:
 
 jobs:
