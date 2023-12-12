@@ -2,7 +2,7 @@
   "cSpell.words": ["Hono", "INIAD", "INIALUM", "Miniflare", "openapi"],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
