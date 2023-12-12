@@ -2,13 +2,16 @@ name: Pull Request Assigner
 
 on:
   pull_request:
-    types: [opened, unassigned]
+    types: [opened]
   workflow_dispatch:
 
 jobs:
   assign:
     runs-on: ubuntu-latest
     timeout-minutes: 1
+    permissions:
+      pull-requests: write
+      repository-projects: write
 
     steps:
       - run: gh pr edit "$NUMBER" --add-assignee "$ASSIGNEE"
