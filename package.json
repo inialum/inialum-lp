@@ -1,42 +1,38 @@
 {
-  "name": "inialum-web",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tmp",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
-    "pages:watch": "npx @cloudflare/next-on-pages --watch",
-    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-10-30 --compatibility-flag=nodejs_compat"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "pnpm run lint:check && pnpm run format:check",
+    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
+    "format": "pnpm run format:write",
+    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
+    "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md,astro}\""
   },
   "dependencies": {
-    "@vanilla-extract/css": "^1.14.0",
-    "next": "^14.0.4",
+    "@astrojs/check": "^0.5.5",
+    "@astrojs/react": "^3.0.10",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
+    "astro": "^4.4.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.8.2",
-    "@types/node": "20",
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
-    "@vanilla-extract/next-plugin": "^2.3.2",
-    "eslint": "^8.55.0",
-    "eslint-config-next": "^14.0.4",
+    "@inialum/eslint-config": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-next-on-pages": "^1.8.2",
-    "eslint-plugin-unused-imports": "^3.0.0",
-    "prettier": "^3.1.1",
-    "typescript": "^5.3.3",
-    "vercel": "^32.7.0"
-  },
-  "engines": {
-    "node": ">=20.0.0"
+    "eslint-plugin-astro": "^0.31.4",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

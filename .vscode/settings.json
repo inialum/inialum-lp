@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Hono", "INIAD", "INIALUM", "Miniflare", "openapi"],
+  "cSpell.words": ["astro", "Hono", "INIAD", "INIALUM", "Miniflare", "openapi"],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
