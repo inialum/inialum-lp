@@ -1,6 +1,7 @@
 {
   "extends": ["@inialum", "plugin:astro/recommended", "prettier"],
   "parserOptions": {
+    "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
   "overrides": [
