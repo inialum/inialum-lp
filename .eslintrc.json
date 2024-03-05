@@ -1,90 +1,17 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "next/core-web-vitals",
-    "plugin:eslint-plugin-next-on-pages/recommended",
-    "prettier"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["@inialum", "plugin:astro/recommended", "prettier"],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
   },
-  "plugins": [
-    "@typescript-eslint",
-    "eslint-plugin-next-on-pages",
-    "unused-imports"
-  ],
-  "rules": {
-    "@typescript-eslint/consistent-type-imports": [
-      "error",
-      {
-        "prefer": "type-imports",
-        "fixStyle": "inline-type-imports"
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
       }
-    ],
-    "@typescript-eslint/no-unused-vars": "off",
-    "import/newline-after-import": "error",
-    "import/order": [
-      "warn",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["sibling", "parent"],
-          "object",
-          "type",
-          "index"
-        ],
-        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": ["builtin"],
-        "alphabetize": { "order": "asc", "caseInsensitive": true },
-        "pathGroups": [
-          {
-            "pattern": "@/constants/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/libs/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/routes/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/types/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/utils/**",
-            "group": "internal",
-            "position": "before"
-          }
-        ]
-      }
-    ],
-    "no-debugger": "warn",
-    "no-console": [
-      "warn",
-      {
-        "allow": ["info", "warn", "error"]
-      }
-    ],
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ]
-  }
+    }
+  ]
 }
