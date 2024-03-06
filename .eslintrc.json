@@ -1,5 +1,10 @@
 {
-  "extends": ["@inialum", "plugin:astro/recommended", "prettier"],
+  "extends": [
+    "@inialum",
+    "plugin:astro/recommended",
+    "plugin:storybook/recommended",
+    "prettier"
+  ],
   "parserOptions": {
     "sourceType": "module",
     "project": ["./tsconfig.json"]
