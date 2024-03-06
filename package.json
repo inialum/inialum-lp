@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -13,7 +12,9 @@
     "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
     "format": "pnpm run format:write",
     "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
-    "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md,astro}\""
+    "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.5",
@@ -30,12 +31,22 @@
   },
   "devDependencies": {
     "@inialum/eslint-config": "^1.1.1",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0"
+    "prettier-plugin-astro": "^0.13.0",
+    "storybook": "^7.6.17"
   }
 }
