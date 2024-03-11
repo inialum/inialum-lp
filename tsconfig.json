@@ -9,5 +9,12 @@
       "@Root/*": ["./*"]
     }
   },
+  "include": [
+    "**/*.astro",
+    "**/*.ts",
+    "**/*.tsx",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx"
+  ],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,47 @@
+.Button {
+  @apply inline-flex items-center justify-center cursor-pointer font-bold;
+}
+
+.Button--filled {
+  @apply text-base-WHITE border;
+}
+
+.Button--filled.Button--primary {
+  @apply bg-inialumBlue-400 border-inialumBlue-400;
+}
+
+.Button--outlined {
+  @apply box-border border bg-transparent;
+}
+
+.Button--outlined.Button--primary {
+  @apply border-inialumBlue-400 text-inialumBlue-400;
+}
+
+.Button--fullWidth {
+  @apply Button--medium w-full;
+}
+
+.Button--medium {
+  @apply text-lg py-2 px-8;
+}
+
+.Button--rounded {
+  @apply rounded;
+}
+
+.Button--more-rounded {
+  border-radius: 16px;
+}
+
+.Button--disabled {
+  @apply cursor-not-allowed;
+}
+
+.Button--disabled.Button--filled {
+  @apply bg-inialumGray-300 border-inialumGray-300;
+}
+
+.Button--disabled.Button--outlined {
+  @apply border-inialumGray-300 text-inialumGray-300;
+}
