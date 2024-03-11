@@ -52,8 +52,9 @@ export default {
           ERROR: '#ca1206',
           WARNING: '#c7a805',
         },
-      }
+      },
     },
   },
   plugins: [],
+  prefix: 'tw-',
 }
