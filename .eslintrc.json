@@ -9,6 +9,7 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
+  "ignorePatterns": ["!.storybook"],
   "overrides": [
     {
       "files": ["*.astro"],
