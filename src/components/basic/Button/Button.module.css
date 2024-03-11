@@ -7,7 +7,7 @@
 }
 
 .Button--filled.Button--primary {
-  @apply bg-inialumBlue-400;
+  @apply bg-inialumBlue-400 border-inialumBlue-400;
 }
 
 .Button--outlined {
@@ -32,4 +32,16 @@
 
 .Button--more-rounded {
   border-radius: 16px;
+}
+
+.Button--disabled {
+  @apply cursor-not-allowed;
+}
+
+.Button--disabled.Button--filled {
+  @apply bg-inialumGray-300 border-inialumGray-300;
+}
+
+.Button--disabled.Button--outlined {
+  @apply border-inialumGray-300 text-inialumGray-300;
 }

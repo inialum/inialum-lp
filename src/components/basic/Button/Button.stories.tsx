@@ -5,14 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 const meta = {
   title: 'basic/Button',
   component: Button,
-  argTypes: {
-    color: {
-      control: {
-        type: 'radio',
-        options: ['primary', 'secondary'],
-      },
-    },
-  },
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -22,7 +14,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     children: '入会する',
-    color: 'primary',
+    colorTheme: 'primary',
     size: 'medium',
     styleType: 'filled',
   },
