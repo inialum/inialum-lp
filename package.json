@@ -13,7 +13,7 @@
     "format": "pnpm run format:write",
     "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
     "format:write": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
-    "storybook:dev": "storybook dev -p 6006",
+    "storybook:dev": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build"
   },
   "dependencies": {
