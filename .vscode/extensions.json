@@ -3,6 +3,7 @@
     "streetsidesoftware.code-spell-checker",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "astro-build.astro-vscode"
+    "astro-build.astro-vscode",
+    "bradlc.vscode-tailwindcss"
   ]
 }
