@@ -1,6 +1,6 @@
 # inialum-lp
 
-Landing Page for INIALUM
+Official website for INIALUM
 
 ## Development
 
@@ -22,6 +22,19 @@ Landing Page for INIALUM
    ```shell
    pnpm run dev
    ```
+
+## Storybook
+
+You can run storybook to see the components in isolation.
+
+```shell
+pnpm run storybook:dev
+```
+
+## Deployment
+
+This service is deployed to [Cloudflare Pages](https://pages.cloudflare.com) using GitHub Actions. When a new commit is pushed to `main` branch, the service will be automatically deployed.  
+If you want to deploy to the staging environment, push the commit to `staging` branch. (`@inialum/inialum-dev` will handle this)
 
 ## Deployment
 
