@@ -1,0 +1,47 @@
+.ButtonLink {
+  @apply inline-flex items-center justify-center cursor-pointer;
+}
+
+.ButtonLink--filled {
+  @apply text-base-WHITE border;
+}
+
+.ButtonLink--filled.ButtonLink--primary {
+  @apply bg-inialumBlue-400 border-inialumBlue-400;
+}
+
+.ButtonLink--outlined {
+  @apply box-border border bg-transparent;
+}
+
+.ButtonLink--outlined.ButtonLink--primary {
+  @apply border-inialumBlue-400 text-inialumBlue-400;
+}
+
+.ButtonLink--fullWidth {
+  @apply ButtonLink--medium w-full;
+}
+
+.ButtonLink--medium {
+  @apply text-lg py-3 px-8;
+}
+
+.ButtonLink--rounded {
+  @apply rounded;
+}
+
+.ButtonLink--more-rounded {
+  border-radius: 32px;
+}
+
+.ButtonLink--disabled {
+  @apply cursor-not-allowed;
+}
+
+.ButtonLink--disabled.ButtonLink--filled {
+  @apply bg-inialumGray-300 border-inialumGray-300;
+}
+
+.ButtonLink--disabled.ButtonLink--outlined {
+  @apply border-inialumGray-300 text-inialumGray-300;
+}
