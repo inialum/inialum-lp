@@ -9,14 +9,14 @@ type Props = ComponentPropsWithRef<'button'> & {
   colorTheme?: 'primary' | 'secondary'
   size?: 'small' | 'medium' | 'large'
   styleType?: 'filled' | 'outlined'
-  radius?: 'rounded' | 'more-rounded'
+  radius?: 'none' | 'rounded' | 'more-rounded'
 }
 
 export const Button = ({
   colorTheme = 'primary',
   size = 'medium',
   styleType = 'filled',
-  radius,
+  radius = 'none',
   className,
   children,
   ...rest

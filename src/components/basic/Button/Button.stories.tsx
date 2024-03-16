@@ -17,6 +17,7 @@ export const Default: Story = {
     colorTheme: 'primary',
     size: 'medium',
     styleType: 'filled',
+    radius: 'none',
   },
 }
 
@@ -31,6 +32,14 @@ export const Rounded: Story = {
   args: {
     ...Default.args,
     radius: 'rounded',
+  },
+}
+
+export const MoreRounded: Story = {
+  args: {
+    ...Default.args,
+    radius: 'more-rounded',
+    children: 'more...',
   },
 }
 
