@@ -2,14 +2,22 @@ name: Test
 
 on:
   push:
+    branches:
+      - main
+      - staging
     paths-ignore:
       - '**.md'
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 3
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
