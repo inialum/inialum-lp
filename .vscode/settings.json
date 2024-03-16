@@ -7,7 +7,8 @@
     "INIAD",
     "INIALUM",
     "Miniflare",
-    "openapi"
+    "openapi",
+    "tsconfigs"
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
