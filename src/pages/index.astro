@@ -1,20 +1,95 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
 
-import { Button } from '@/components/basic/Button/Button'
+import iniadHub1Image from '@/assets/images/top/iniad_hub_1.png'
+import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
+import HeadingText from '@/components/common/HeadingText.astro'
+import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="INIALUM">
-  <main>
-    <h1>This is INIALUM</h1>
-    <Button>Push!</Button>
+  <main class="main">
+    <div class="campus-image-wrapper">
+      <Image
+        src={iniadHub1Image}
+        alt="INIAD Hub-1"
+        class="campus-image"
+        quality="low"
+      />
+    </div>
+    <section class="about-us">
+      <div>
+        <HeadingText text="Vision" />
+        <p class="vision-text">
+          ともに歩んだ仲間と、<wbr />
+          さらなる連携をつくる
+        </p>
+      </div>
+      <div>
+        <HeadingText text="Mission" />
+        <p class="mission-text">
+          INIAD卒業生のつながりをつくり、<wbr />
+          世界で活躍する足がかりを築く
+        </p>
+      </div>
+      <div class="message">
+        <p>INIAD同窓会「INIALUM」は、<br />唯一のINIAD公認の同窓会組織です。</p>
+        <p>
+          私たちは、INIAD卒業生と在学生全員をつなぎ、<br
+          />世界で活躍する支援をします。
+        </p>
+      </div>
+      <ButtonLink href="/about" radius="more-rounded">more...</ButtonLink>
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
+  .main {
     @apply text-base-BLACK;
+  }
 
-    padding: 16px 8px;
+  .campus-image-wrapper {
+    @apply flex justify-center bg-primary;
+
+    padding: 32px 32px 0 0;
+  }
+
+  .campus-image {
+    @apply object-cover	w-full sm:w-[800px] sm:h-[413px];
+  }
+
+  .about-us {
+    @apply flex flex-col items-start justify-center mx-auto;
+
+    row-gap: 56px;
+    max-width: 470px;
+    font-size: 14px;
+    padding: 42px 0;
+  }
+
+  .vision-text {
+    @apply font-bold;
+
+    padding-top: 24px;
+    font-size: 22px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .mission-text {
+    @apply font-bold;
+
+    padding-top: 24px;
+    font-size: 18px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .message {
+    @apply flex flex-col;
+
+    row-gap: 28px;
+    line-height: 2;
   }
 </style>
