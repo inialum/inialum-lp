@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "pages:preview": "astro build && wrangler pages dev ./dist",
-    "pages:deploy": "if test \"$IS_PRODUCTION_DEPLOY\" = \"true\" ; then astro build && wrangler pages deploy ./dist --project-name inialum-lp; else astro build && wrangler pages deploy ./dist --project-name inialum-lp-staging --branch staging; fi",
+    "pages:deploy": "if test \"$IS_PRODUCTION_DEPLOY\" = \"true\" ; then astro build && wrangler pages deploy ./dist --project-name inialum-lp; else astro build && wrangler pages deploy ./dist --project-name inialum-lp-staging --branch main; fi",
     "lint": "pnpm run lint:check && pnpm run format:check",
     "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
