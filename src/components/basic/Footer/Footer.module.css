@@ -1,0 +1,52 @@
+.Footer {
+  background-color: #f0f5f6;
+  padding: 52px 52px 28px 52px;
+}
+
+.Footer__Head {
+  @apply flex flex-col items-center justify-center;
+
+  row-gap: 12px;
+}
+
+.Footer__Head .Footer__Logo {
+  @apply  object-cover;
+
+  width: 120px;
+  height: 120px;
+}
+
+.Footer__Head .Footer__Copy {
+  @apply font-bold;
+
+  font-size: 8px;
+}
+
+.Footer .Footer__NavList {
+  @apply flex flex-col items-center text-center;
+
+  row-gap: 32px;
+  padding: 40px 0 32px
+}
+
+.Footer .Footer__NavList .Footer__Item {
+  @apply font-bold;
+
+  font-size: 12px;
+}
+
+.Footer .Footer__Bottom {
+  @apply flex flex-col items-center text-center;
+
+  padding: 32px 0 0;
+  row-gap: 20px;
+  border-top: 1px solid #116a88;
+}
+
+.Footer .Footer__Bottom .Footer__Item {
+  @apply flex items-center justify-center;
+
+  column-gap: 20px;
+  font-size: 8px;
+  color: #6b838b
+}
