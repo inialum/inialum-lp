@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
 
 import streetImage from '@/assets/images/common/akabanedai_street.png'
@@ -9,7 +11,11 @@ import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
   <div class="entry-form-panel">
     <div class="entry-form-panel-content">
       <div class="street-image">
-        <img src={streetImage.src} alt="INIALUM - INIAD Alumni Meetings" />
+        <Image
+          src={streetImage}
+          alt="INIALUM - INIAD Alumni Meetings"
+          quality="low"
+        />
       </div>
       <div class="copy">
         <p>さあ、あなたも、ともに歩んだ仲間と</p>
