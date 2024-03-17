@@ -6,8 +6,8 @@ import { type ComponentPropsWithRef } from 'react'
 import styles from './Button.module.css'
 
 type Props = ComponentPropsWithRef<'button'> & {
-  colorTheme?: 'primary' | 'secondary'
-  size?: 'small' | 'medium' | 'large'
+  colorTheme?: 'primary' | 'secondary' | 'white'
+  size?: 'small' | 'medium' | 'large' | 'fullWidth'
   styleType?: 'filled' | 'outlined'
   radius?: 'none' | 'rounded' | 'more-rounded'
 }
@@ -29,9 +29,11 @@ export const Button = ({
         styles.Button,
         colorTheme === 'primary' && styles['Button--primary'],
         colorTheme === 'secondary' && styles['Button--secondary'],
+        colorTheme === 'white' && styles['Button--white'],
         size === 'small' && styles['Button--small'],
         size === 'medium' && styles['Button--medium'],
         size === 'large' && styles['Button--large'],
+        size === 'fullWidth' && styles['Button--fullWidth'],
         styleType === 'filled' && styles['Button--filled'],
         styleType === 'outlined' && styles['Button--outlined'],
         radius === 'rounded' && styles['Button--rounded'],

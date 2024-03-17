@@ -10,8 +10,12 @@
   @apply bg-inialumBlue-400 border-inialumBlue-400;
 }
 
+.Button--filled.Button--white {
+  @apply bg-base-WHITE border-base-WHITE text-primary;
+}
+
 .Button--outlined {
-  @apply box-border border bg-transparent;
+  @apply box-border border-2 bg-transparent;
 }
 
 .Button--outlined.Button--primary {
