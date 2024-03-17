@@ -50,6 +50,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
+    "sharp": "^0.33.2",
     "storybook": "^8.0.0",
     "wrangler": "^3.34.2"
   }
