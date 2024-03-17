@@ -6,8 +6,8 @@ import { type ComponentPropsWithRef } from 'react'
 import styles from './ButtonLink.module.css'
 
 type Props = ComponentPropsWithRef<'a'> & {
-  colorTheme?: 'primary' | 'secondary'
-  size?: 'small' | 'medium' | 'large'
+  colorTheme?: 'primary' | 'secondary' | 'white'
+  size?: 'small' | 'medium' | 'large' | 'fullWidth'
   styleType?: 'filled' | 'outlined'
   radius?: 'none' | 'rounded' | 'more-rounded'
   disabled?: boolean
@@ -36,9 +36,11 @@ export const ButtonLink = ({
         styles.ButtonLink,
         colorTheme === 'primary' && styles['ButtonLink--primary'],
         colorTheme === 'secondary' && styles['ButtonLink--secondary'],
+        colorTheme === 'white' && styles['ButtonLink--white'],
         size === 'small' && styles['ButtonLink--small'],
         size === 'medium' && styles['ButtonLink--medium'],
         size === 'large' && styles['ButtonLink--large'],
+        size === 'fullWidth' && styles['ButtonLink--fullWidth'],
         styleType === 'filled' && styles['ButtonLink--filled'],
         styleType === 'outlined' && styles['ButtonLink--outlined'],
         radius === 'rounded' && styles['ButtonLink--rounded'],
