@@ -1,51 +1,51 @@
-.Button {
+.ButtonLink {
   @apply inline-flex items-center justify-center cursor-pointer;
 }
 
-.Button--filled {
+.ButtonLink--filled {
   @apply text-base-WHITE border;
 }
 
-.Button--filled.Button--primary {
+.ButtonLink--filled.ButtonLink--primary {
   @apply bg-inialumBlue-400 border-inialumBlue-400;
 }
 
-.Button--filled.Button--white {
+.ButtonLink--filled.ButtonLink--white {
   @apply bg-base-WHITE border-base-WHITE text-primary;
 }
 
-.Button--outlined {
+.ButtonLink--outlined {
   @apply box-border border-2 bg-transparent;
 }
 
-.Button--outlined.Button--primary {
+.ButtonLink--outlined.ButtonLink--primary {
   @apply border-inialumBlue-400 text-inialumBlue-400;
 }
 
-.Button--fullWidth {
-  @apply Button--medium w-full;
+.ButtonLink--fullWidth {
+  @apply ButtonLink--medium w-full;
 }
 
-.Button--medium {
+.ButtonLink--medium {
   @apply text-lg py-3 px-8;
 }
 
-.Button--rounded {
+.ButtonLink--rounded {
   @apply rounded;
 }
 
-.Button--more-rounded {
+.ButtonLink--more-rounded {
   border-radius: 32px;
 }
 
-.Button--disabled {
+.ButtonLink--disabled {
   @apply cursor-not-allowed;
 }
 
-.Button--disabled.Button--filled {
+.ButtonLink--disabled.ButtonLink--filled {
   @apply bg-inialumGray-300 border-inialumGray-300;
 }
 
-.Button--disabled.Button--outlined {
+.ButtonLink--disabled.ButtonLink--outlined {
   @apply border-inialumGray-300 text-inialumGray-300;
 }
