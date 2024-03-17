@@ -1,5 +1,6 @@
 .Footer {
-  background-color: #f0f5f6;
+  @apply bg-base-BLOCK;
+
   padding: 52px 52px 28px 52px;
 }
 
@@ -36,17 +37,15 @@
 }
 
 .Footer .Footer__Bottom {
-  @apply flex flex-col items-center text-center;
+  @apply flex flex-col items-center text-center border-t border-t-inialumGray-500;
 
   padding: 32px 0 0;
   row-gap: 20px;
-  border-top: 1px solid #116a88;
 }
 
 .Footer .Footer__Bottom .Footer__Item {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center text-inialumGray-500;
 
   column-gap: 20px;
   font-size: 8px;
-  color: #6b838b
 }
