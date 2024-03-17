@@ -15,8 +15,14 @@ export const Footer = ({ className, ...rest }: Props) => {
   return (
     <footer {...rest} className={clsx(className, styles.Footer)}>
       <div className={styles.Footer__Head}>
-        <img src={logoImage.src} alt="INIALUM - INIAD Alumni Meetings" className={styles.Footer__Logo} />
-        <div className={styles.Footer__Copy}>さらなる連携を、ともに歩んだ仲間と</div>
+        <img
+          src={logoImage.src}
+          alt="INIALUM - INIAD Alumni Meetings"
+          className={styles.Footer__Logo}
+        />
+        <div className={styles.Footer__Copy}>
+          さらなる連携を、ともに歩んだ仲間と
+        </div>
       </div>
       <nav>
         <ul className={styles.Footer__NavList}>
