@@ -1,7 +1,10 @@
 ---
 import { Image } from 'astro:assets'
 
+import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
+
 import iniadHub1Image from '@/assets/images/top/iniad_hub_1.png'
+import iniadSakuraImage from '@/assets/images/top/iniad_sakura.jpg'
 import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
 import HeadingText from '@/components/common/HeadingText.astro'
 import Layout from '@/layouts/Layout.astro'
@@ -9,6 +12,29 @@ import Layout from '@/layouts/Layout.astro'
 
 <Layout title="INIALUM">
   <main class="main">
+    <div class="headline">
+      <Image
+        src={iniadSakuraImage}
+        alt=""
+        class="headline-image"
+        quality="medium"
+      />
+      <div class="headline-content">
+        <div class="headline-copy">
+          <div>さらなる<span class="headline-copy-strong">連携</span>を、</div>
+          <div class="headline-copy-text-2">
+            ともに歩んだ<span class="headline-copy-strong">仲間</span>と
+          </div>
+        </div>
+        <ButtonLink
+          href={INIALUM_ENTRY_FORM_LINK}
+          size="fullWidth"
+          className="entry-form-link-button"
+        >
+          入会する
+        </ButtonLink>
+      </div>
+    </div>
     <div class="campus-image-wrapper">
       <Image
         src={iniadHub1Image}
@@ -34,19 +60,63 @@ import Layout from '@/layouts/Layout.astro'
       </div>
       <div class="message">
         <p>
-          INIAD同窓会「INIALUM」は、<br />唯一のINIAD公認の同窓会組織です。
+          INIAD同窓会「INIALUM」は、<wbr />唯一のINIAD公認の同窓会組織です。
         </p>
         <p>
-          私たちは、INIAD卒業生と在学生全員をつなぎ、<br
+          私たちは、INIAD卒業生と在学生全員をつなぎ、<wbr
           />世界で活躍する支援をします。
         </p>
       </div>
+      <!--
       <ButtonLink href="/about" radius="more-rounded">more...</ButtonLink>
+       -->
     </section>
   </main>
 </Layout>
 
 <style>
+  .headline {
+    @apply h-[720px] md:h-[848px] relative;
+  }
+
+  .headline::after {
+    @apply absolute inset-0	w-full h-full z-10;
+
+    content: '';
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.54) 100%
+    );
+  }
+
+  .headline-image {
+    @apply object-cover	w-full h-full relative;
+  }
+
+  .headline-content {
+    @apply absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto;
+
+    max-width: 470px;
+    padding: 0 40px 64px;
+  }
+
+  .headline-copy {
+    @apply flex flex-col w-full text-base-WHITE;
+
+    padding: 0 0 32px;
+    font-size: 22px;
+  }
+
+  .headline-copy-strong {
+    padding: 0 1px;
+    font-size: 38px;
+  }
+
+  .headline-copy-text-2 {
+    @apply text-end;
+  }
+
   .main {
     @apply text-base-BLACK;
   }
@@ -62,34 +132,31 @@ import Layout from '@/layouts/Layout.astro'
   }
 
   .about-us {
-    @apply flex flex-col items-start justify-center mx-auto;
+    @apply flex flex-col items-start justify-center mx-auto max-w-[470px] md:max-w-[580px];
 
     row-gap: 56px;
-    max-width: 470px;
     font-size: 14px;
-    padding: 42px 0;
+    padding: 42px 20px;
   }
 
   .vision-text {
-    @apply font-bold;
+    @apply font-bold break-keep;
 
     padding-top: 24px;
     font-size: 22px;
     line-height: 1.7;
-    word-break: keep-all;
   }
 
   .mission-text {
-    @apply font-bold;
+    @apply font-bold break-keep;
 
     padding-top: 24px;
     font-size: 18px;
     line-height: 1.7;
-    word-break: keep-all;
   }
 
   .message {
-    @apply flex flex-col;
+    @apply flex flex-col break-keep;
 
     row-gap: 28px;
     line-height: 2;
