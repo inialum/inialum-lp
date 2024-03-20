@@ -37,7 +37,7 @@
 }
 
 .Footer .Footer__Bottom {
-  @apply flex flex-col items-center text-center border-t border-t-inialumGray-500;
+  @apply flex flex-col items-center text-center border-t border-t-inialumGray-500 max-w-[732px] mx-auto;
 
   padding: 28px 0 0;
   row-gap: 16px;
