@@ -39,11 +39,17 @@
 .Footer .Footer__Bottom {
   @apply flex flex-col items-center text-center border-t border-t-inialumGray-500;
 
-  padding: 32px 0 0;
-  row-gap: 20px;
+  padding: 28px 0 0;
+  row-gap: 16px;
 }
 
-.Footer .Footer__Bottom .Footer__Item {
+.Footer .Footer__Bottom .Footer__Item--top {
+  @apply flex items-center justify-center;
+
+  padding: 0 0 12px;
+}
+
+.Footer .Footer__Bottom .Footer__Item--small {
   @apply flex items-center justify-center text-inialumGray-500;
 
   column-gap: 20px;

@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 
 import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
 
-import streetImage from '@/assets/images/common/akabanedai_street.png'
+import streetImage from '@/assets/images/common/akabanedai_street.jpg'
 import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
 ---
 
@@ -76,7 +76,13 @@ import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
   .street-image {
     @apply flex justify-end min-[470px]:justify-center;
 
-    padding: 0 0 72px;
+    padding: 0 0 72px 36px;
+  }
+
+  @media (470px <= width) {
+    .street-image {
+      padding: 0 0 72px;
+    }
   }
 
   .copy {
