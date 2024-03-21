@@ -1,0 +1,27 @@
+  .visuallyHiddenTitle {
+    @apply sr-only;
+  }
+
+  .outerContainer {
+    @apply bg-primary relative;
+
+    padding-left: 36px;
+  }
+
+  .sideTextContainer {
+    @apply absolute top-0 left-0;
+
+    padding: calc(100vh - 136px) 0 0 8px;
+  }
+
+  .sideText {
+    @apply text-base-WHITE;
+
+    font-size: 12px;
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translateY(100%);
+  }
+
+  .innerContainer {
+    @apply bg-base-WHITE;
+  }
