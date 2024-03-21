@@ -1,4 +1,7 @@
 ---
+import { Footer } from '@/components/basic/Footer/Footer'
+import BottomPanel from '@/components/common/BottomPanel.astro'
+import Header from '@/components/common/Header.astro'
 import '@/styles/tailwind.css'
 
 interface Props {
@@ -15,17 +18,71 @@ const { title } = Astro.props
     <meta name="description" content="INIAD Alumni Meetings" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Header />
+    <h1 class="visually-hidden-title">{title}</h1>
+
+    <div class="outer-container">
+      <div class="side-text-container">
+        <div class="side-text" aria-hidden="true">
+          INIALUM - INIAD Alumni Meetings
+        </div>
+      </div>
+
+      <div class="inner-container">
+        <slot />
+      </div>
+    </div>
+
+    <BottomPanel />
+    <Footer />
   </body>
 </html>
+
 <style is:global>
   :root {
   }
+
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'BIZ UDPGothic', sans-serif;
+  }
+</style>
+
+<style>
+  .visually-hidden-title {
+    @apply sr-only;
+  }
+
+  .outer-container {
+    @apply bg-primary relative;
+
+    padding-left: 36px;
+  }
+
+  .side-text-container {
+    @apply absolute top-0 left-0;
+
+    padding: calc(100vh - 136px) 0 0 8px;
+  }
+
+  .side-text {
+    @apply text-base-WHITE;
+
+    font-size: 12px;
+    transform-origin: bottom left;
+    transform: rotate(-90deg) translateY(100%);
+  }
+
+  .inner-container {
+    @apply bg-base-WHITE;
   }
 </style>
