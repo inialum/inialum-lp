@@ -1,44 +1,63 @@
 ---
+import styles from './Layout.module.css'
+
 import { Footer } from '@/components/basic/Footer/Footer'
 import BottomPanel from '@/components/common/BottomPanel.astro'
 import Header from '@/components/common/Header.astro'
 import '@/styles/tailwind.css'
+import '@/styles/global.css'
 
 interface Props {
   title: string
 }
 
 const { title } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const socialImageURL = new URL('/share.png', Astro.url)
+
+const DESCRIPTION =
+  'INIAD同窓会「INIALUM」は、唯一のINIAD公認の同窓会組織です。私たちは、INIAD卒業生と在学生全員をつなぎ、世界で活躍する支援をします。'
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="INIAD Alumni Meetings" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="generator" content={Astro.generator} />
+
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="theme-color" content="#00b0eb" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+
     <title>{title}</title>
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="description" content={DESCRIPTION} />
+    <meta property="og:description" content={DESCRIPTION} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <Header />
-    <h1 class="visually-hidden-title">{title}</h1>
+    <h1 class={styles.visuallyHiddenTitle}>{title}</h1>
 
-    <div class="outer-container">
-      <div class="side-text-container">
-        <div class="side-text" aria-hidden="true">
+    <div class={styles.outerContainer}>
+      <div class={styles.sideTextContainer}>
+        <div class={styles.sideText} aria-hidden="true">
           INIALUM - INIAD Alumni Meetings
         </div>
       </div>
 
-      <div class="inner-container">
+      <div class={styles.innerContainer}>
         <slot />
       </div>
     </div>
@@ -47,42 +66,3 @@ const { title } = Astro.props
     <Footer />
   </body>
 </html>
-
-<style is:global>
-  :root {
-  }
-
-  html {
-    font-family: 'BIZ UDPGothic', sans-serif;
-  }
-</style>
-
-<style>
-  .visually-hidden-title {
-    @apply sr-only;
-  }
-
-  .outer-container {
-    @apply bg-primary relative;
-
-    padding-left: 36px;
-  }
-
-  .side-text-container {
-    @apply absolute top-0 left-0;
-
-    padding: calc(100vh - 136px) 0 0 8px;
-  }
-
-  .side-text {
-    @apply text-base-WHITE;
-
-    font-size: 12px;
-    transform-origin: bottom left;
-    transform: rotate(-90deg) translateY(100%);
-  }
-
-  .inner-container {
-    @apply bg-base-WHITE;
-  }
-</style>
