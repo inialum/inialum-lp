@@ -1,11 +1,11 @@
-import { Button } from './Button'
+import { ButtonLink } from './ButtonLink'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'basic/Button',
-  component: Button,
-} satisfies Meta<typeof Button>
+  title: 'basic/ButtonLink',
+  component: ButtonLink,
+} satisfies Meta<typeof ButtonLink>
 
 export default meta
 
