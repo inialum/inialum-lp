@@ -30,9 +30,11 @@ export const Footer = ({ className, ...rest }: Props) => {
           <li className={styles.Footer__Item}>
             <a href="/">ホーム</a>
           </li>
+          {/*
           <li className={styles.Footer__Item}>
             <a href="/about">私たちの思い</a>
           </li>
+          */}
           <li className={styles.Footer__Item}>
             <a href="https://inialum.org/join">入会する</a>
           </li>
