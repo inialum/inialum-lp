@@ -7,6 +7,8 @@
     "INIAD",
     "INIALUM",
     "Miniflare",
+    "noindex",
+    "nosniff",
     "openapi",
     "tsconfigs"
   ],
