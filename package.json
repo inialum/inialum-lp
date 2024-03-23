@@ -1,7 +1,8 @@
 {
-  "name": "tmp",
+  "name": "inialum-lp",
   "type": "module",
-  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
