@@ -1,0 +1,9 @@
+.header {
+  @apply bg-primary w-full relative;
+
+  height: 60px;
+}
+
+.headerLogo {
+  @apply flex items-center justify-center w-[160px] h-[160px] p-[12px] md:w-[320px] md:h-[320px] md:p-[24px] bg-base-WHITE absolute z-30;
+}
