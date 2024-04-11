@@ -7,5 +7,5 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["tailwind.config.ts"]
+  "include": ["astro.config.ts", "tailwind.config.ts"]
 }
