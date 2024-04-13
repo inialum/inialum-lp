@@ -18,8 +18,8 @@ dependencies:
     specifier: ^0.0.3
     version: 0.0.3(tailwindcss@3.4.3)
   '@inialum/memories-react':
-    specifier: ^0.0.1
-    version: 0.0.1(@inialum/memories-css@0.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
+    specifier: 0.0.2
+    version: 0.0.2(@inialum/memories-css@0.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
   '@types/react':
     specifier: ^18.2.75
     version: 18.2.75
@@ -2578,8 +2578,8 @@ packages:
       tailwindcss: 3.4.3
     dev: false
 
-  /@inialum/memories-react@0.0.1(@inialum/memories-css@0.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3):
-    resolution: {integrity: sha512-87bGmO00ORdjMbO327rKQf4J7dQ73gByx4hz5n13IUbyZXnHs9DozhNCjP4Hmt1Vq3MnBhdPO4KhURgfJxCizA==}
+  /@inialum/memories-react@0.0.2(@inialum/memories-css@0.0.3)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3):
+    resolution: {integrity: sha512-zFWiwkCJPCl+FiWer9onDMOuQ173OkSCyQuTG+Gz2/KYzhMw9I7L2wpdB9DY6lDpZXadzyoHFf1EhvMh5Qpwfg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@inialum/memories-css': '>= 0.0.1'
