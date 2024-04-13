@@ -16,7 +16,8 @@
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
-      }
+      },
+      "processor": "astro/client-side-ts"
     }
   ]
 }
