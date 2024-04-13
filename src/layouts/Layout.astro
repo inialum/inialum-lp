@@ -1,9 +1,10 @@
 ---
+import { Footer } from '@inialum/memories-react'
+
 import styles from './Layout.module.css'
 
-import { Footer } from '@/components/basic/Footer/Footer'
 import BottomPanel from '@/components/common/BottomPanel.astro'
-import Header from '@/components/common/Header.astro'
+import Header from '@/components/common/Header/Header.astro'
 import '@/styles/tailwind.css'
 import '@/styles/global.css'
 
@@ -25,6 +26,7 @@ const DESCRIPTION =
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,6 +42,7 @@ const DESCRIPTION =
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={DESCRIPTION} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={DESCRIPTION} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />

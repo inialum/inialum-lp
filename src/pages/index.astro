@@ -1,11 +1,11 @@
 ---
+import { ButtonLink } from '@inialum/memories-react'
 import { Image } from 'astro:assets'
 
 import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
 
 import iniadHub1Image from '@/assets/images/top/iniad_hub_1.png'
 import iniadSakuraImage from '@/assets/images/top/iniad_sakura.jpg'
-import { ButtonLink } from '@/components/basic/ButtonLink/ButtonLink'
 import HeadingText from '@/components/common/HeadingText.astro'
 import Layout from '@/layouts/Layout.astro'
 ---
@@ -29,7 +29,7 @@ import Layout from '@/layouts/Layout.astro'
         <ButtonLink
           href={INIALUM_ENTRY_FORM_LINK}
           size="fullWidth"
-          className="entry-form-link-button"
+          radius="rounded"
         >
           入会する
         </ButtonLink>

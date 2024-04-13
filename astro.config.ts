@@ -21,15 +21,17 @@ export default defineConfig({
     locales: ['ja', 'en'],
   },
   vite: {
-    resolve: [
-      {
-        find: '@Root',
-        replacement: resolve(__dirname, '.'),
-      },
-      {
-        find: '@',
-        replacement: resolve(__dirname, './src'),
-      },
-    ],
-  }
+    resolve: {
+      alias: [
+        {
+          find: '@Root',
+          replacement: resolve(__dirname, '.'),
+        },
+        {
+          find: '@',
+          replacement: resolve(__dirname, './src'),
+        },
+      ],
+    },
+  },
 })
