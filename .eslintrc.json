@@ -6,8 +6,7 @@
     "prettier"
   ],
   "parserOptions": {
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
+    "project": ["./tsconfig.json", "./tsconfig.node.json"]
   },
   "ignorePatterns": ["!.storybook"],
   "overrides": [
@@ -17,7 +16,8 @@
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
-      }
+      },
+      "processor": "astro/client-side-ts"
     }
   ]
 }
