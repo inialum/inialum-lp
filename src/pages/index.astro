@@ -29,7 +29,7 @@ import Layout from '@/layouts/Layout.astro'
         <ButtonLink
           href={INIALUM_ENTRY_FORM_LINK}
           size="fullWidth"
-          radius="rounded"
+          className="entry-form-link"
         >
           入会する
         </ButtonLink>
@@ -115,6 +115,10 @@ import Layout from '@/layouts/Layout.astro'
 
   .headline-copy-text-2 {
     @apply text-end;
+  }
+
+  .entry-form-link-button {
+    @apply font-bold;
   }
 
   .main {
