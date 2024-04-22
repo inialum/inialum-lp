@@ -26,7 +26,11 @@ import Layout from '@/layouts/Layout.astro'
             ともに歩んだ<span class="headline-copy-strong">仲間</span>と
           </div>
         </div>
-        <ButtonLink href={INIALUM_ENTRY_FORM_LINK} size="fullWidth">
+        <ButtonLink
+          href={INIALUM_ENTRY_FORM_LINK}
+          size="fullWidth"
+          className="entry-form-link-button"
+        >
           入会する
         </ButtonLink>
       </div>
@@ -111,6 +115,10 @@ import Layout from '@/layouts/Layout.astro'
 
   .headline-copy-text-2 {
     @apply text-end;
+  }
+
+  .entry-form-link-button {
+    @apply font-bold;
   }
 
   .main {
