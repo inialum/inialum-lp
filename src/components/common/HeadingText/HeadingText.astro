@@ -1,0 +1,11 @@
+---
+import styles from './HeadingText.module.css'
+
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<div class={styles.heading}>{text}</div>
