@@ -1,0 +1,65 @@
+.bottomPanel {
+  @apply flex flex-col w-full;
+}
+
+.entryFormPanel {
+  @apply bg-primary w-full;
+  padding: 68px 0 32px;
+}
+
+.entryFormPanelContent {
+  @apply flex flex-col mx-auto;
+  max-width: 470px;
+}
+
+.streetImage {
+  @apply flex justify-end min-[470px]:justify-center;
+  padding: 0 0 72px 36px;
+}
+
+@media (470px <= width) {
+  .streetImage {
+    padding: 0 0 72px;
+  }
+}
+
+.copy {
+  @apply flex flex-col text-white;
+  row-gap: 24px;
+  padding: 0 36px 64px;
+}
+
+@media (470px <= width) {
+  .copy {
+    padding: 0 56px 64px;
+  }
+}
+
+.copySecondLine {
+  @apply text-end;
+}
+
+.copyStrong {
+  @apply text-2xl;
+  padding: 0 4px;
+}
+
+.entryFormLink {
+  padding: 0 52px;
+}
+
+.entryFormLinkButton {
+  @apply font-bold;
+}
+
+.linksPanel {
+  @apply flex flex-col w-full mx-auto;
+  row-gap: 24px;
+  padding: 72px 52px;
+  max-width: 470px;
+}
+
+.faqLinkButton,
+.contactLinkButton {
+  @apply font-bold;
+}
