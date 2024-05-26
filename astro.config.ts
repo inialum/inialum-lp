@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   site: 'https://inialum.org',
-  trailingSlash: 'always',
+  trailingSlash: 'never',
   integrations: [
     react(),
     tailwind({
