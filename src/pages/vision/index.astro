@@ -1,0 +1,82 @@
+---
+import { ButtonLink } from '@inialum/memories-react'
+import { Image } from 'astro:assets'
+
+import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
+
+import styles from './_vision.module.css'
+
+import iniadHub1Image from '@/assets/images/top/iniad_hub_1.png'
+import iniadSakuraImage from '@/assets/images/top/iniad_sakura.jpg'
+import HeadingText from '@/components/common/HeadingText/HeadingText.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="私たちの思い | INIAD同窓会「INIALUM」">
+  <main class={styles.main}>
+    <div class={styles.headline}>
+      <Image
+        src={iniadSakuraImage}
+        alt=""
+        class={styles.headlineImage}
+        quality="medium"
+      />
+      <div class={styles.headlineContent}>
+        <div class="headline-copy">
+          <div>さらなる<span class="headline-copy-strong">連携</span>を、</div>
+          <div class="headline-copy-text-2">
+            ともに歩んだ<span class="headline-copy-strong">仲間</span>と
+          </div>
+        </div>
+        <ButtonLink
+          href={INIALUM_ENTRY_FORM_LINK}
+          size="fullWidth"
+          className="entry-form-link-button"
+        >
+          入会する
+        </ButtonLink>
+      </div>
+    </div>
+    <div class="campus-image-wrapper">
+      <Image
+        src={iniadHub1Image}
+        alt="INIAD Hub-1"
+        class="campus-image"
+        quality="medium"
+      />
+    </div>
+    <section class="about-us">
+      <div>
+        <HeadingText text="Vision" />
+        <p class="vision-text">
+          ともに歩んだ仲間と、<wbr />
+          さらなる連携をつくる
+        </p>
+      </div>
+      <div>
+        <HeadingText text="Mission" />
+        <p class="mission-text">
+          INIAD卒業生のつながりをつくり、<wbr />
+          世界で活躍する足がかりを築く
+        </p>
+      </div>
+      <div>
+        <HeadingText text="Values" />
+        <p class="value-text">
+          <div>つながりをつくる</div>
+          INIAD卒業生のつながりをつくり、<wbr />
+          世界で活躍する足がかりを築く
+        </p>
+      </div>
+      <div class="message">
+        <p>
+          INIAD同窓会「INIALUM」は、<wbr />唯一のINIAD公認の同窓会組織です。
+        </p>
+        <p>
+          私たちは、INIAD卒業生と在学生全員をつなぎ、<wbr
+          />世界で活躍する支援をします。
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
