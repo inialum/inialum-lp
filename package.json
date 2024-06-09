@@ -51,6 +51,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.32.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "postcss-nesting": "^12.1.5",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "sharp": "^0.33.3",
