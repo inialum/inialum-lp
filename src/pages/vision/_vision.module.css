@@ -22,6 +22,67 @@
 }
 
 .headlineContent {
-  @apply absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto max-w-[470px] pt-0 px-40 pb-64;
+  @apply absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto;
 
+  max-width: 470px;
+  padding: 0 40px 64px;
+}
+
+.headlineCopy {
+  @apply flex flex-col w-full text-base-WHITE font-bold;
+
+  font-size: 32px;
+
+  @media (640px <= width) {
+    font-size: 56px;
+  }
+}
+
+.headlineCopyText2 {
+  @apply text-end;
+}
+
+.entryFromLinkButton {
+  @apply font-bold;
+}
+
+.campusImageWrapper {
+  @apply flex justify-center bg-primary;
+
+  padding: 32px 32px 0 0;
+}
+
+.campusImage {
+  @apply object-cover	w-full sm:w-[800px] sm:h-[413px];
+}
+
+.aboutUs {
+  @apply flex flex-col items-start justify-center mx-auto max-w-[470px] md:max-w-[580px];
+
+  row-gap: 56px;
+  font-size: 14px;
+  padding: 42px 20px;
+}
+
+.visionText {
+  @apply font-bold break-keep;
+
+  padding-top: 24px;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.missionText {
+  @apply font-bold break-keep;
+
+  padding-top: 24px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.message {
+  @apply flex flex-col break-keep;
+
+  row-gap: 28px;
+  line-height: 2;
 }
