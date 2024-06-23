@@ -1,10 +1,9 @@
 ---
-import { Footer } from '@inialum/memories-react'
+import { Header, Footer } from '@inialum/memories-react'
 
 import styles from './Layout.module.css'
 
 import BottomPanel from '@/components/common/BottomPanel/BottomPanel.astro'
-import Header from '@/components/common/Header/Header.astro'
 import '@/styles/tailwind.css'
 import '@/styles/global.css'
 
@@ -50,7 +49,7 @@ const DESCRIPTION =
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
-    <Header />
+    <Header client:load />
     <h1 class={styles.visuallyHiddenTitle}>{title}</h1>
 
     <div class={styles.outerContainer}>
