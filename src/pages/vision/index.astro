@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets'
+
+import styles from './_vision.module.css'
+
+import iniadWallImage from '@/assets/images/other/iniad_wall.jpg'
+import HeadingText from '@/components/common/HeadingText/HeadingText.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="私たちの思い | INIAD同窓会「INIALUM」">
+  <main class={styles.main}>
+    <div class={styles.headline}>
+      <Image
+        src={iniadWallImage}
+        alt=""
+        class={styles.headlineImage}
+        quality="medium"
+      />
+      <div class={styles.headlineContent}>
+        <div class={styles.headlineCopy}>私たちの思い</div>
+      </div>
+    </div>
+    <section class={styles.aboutUs}>
+      <div>
+        <HeadingText text="Vision" />
+        <p class={styles.visionText}>
+          ともに歩んだ仲間と、<wbr />
+          さらなる連携をつくる
+        </p>
+      </div>
+      <div>
+        <HeadingText text="Mission" />
+        <p class={styles.missionText}>
+          INIAD卒業生のつながりをつくり、<wbr />
+          世界で活躍する足がかりを築く
+        </p>
+      </div>
+      <div>
+        <HeadingText text="Values" />
+        <p>
+          <div class={styles.visionText}>つながりをつくる</div>
+          卒業生同士のつながりを維持しさらに発展させる<br />
+          INIADとの接点を持ち続けられるようにする<br />
+          卒業生と在学生のつながりをつくる
+        </p>
+        <p class="value-text">
+          <div class={styles.visionText}>みえるようにする</div>
+          卒業生を在学生から可視化し、<wbr />
+          在学生のロールモデルをつくる<br />
+          卒業生がINIADの現状を知れるようにする
+        </p>
+        <p class="value-text">
+          <div class={styles.visionText}>キャリアを支援する</div>
+          卒業生にキャリアを求められる場所を提供する<br />
+          INIAD在学生がキャリアにおいて、<wbr />
+          卒業生とつながれるようにする
+        </p>
+        <p class="value-text">
+          <div class={styles.visionText}>活動を支援する</div>
+          卒業生の仲間集めを助ける<br />
+          卒業生の経験をINIADに還元する
+        </p>
+      </div>
+      <div class={styles.message}>
+        <HeadingText text="About" />
+        <p>
+          INIAD同窓会「INIALUM」は、<wbr />
+          唯一のINIAD公認の同窓会組織です。
+        </p>
+        <p>「さらなる連携を、ともに歩んだ仲間と」</p>
+        <p>
+          INIALUMは、INIADでともに学んだ仲間達が<br />
+          卒業後も連携を絶やさず、<wbr />
+          社会を歩んでいく足がかりとなります。
+        </p>
+        <p>
+          私たちは、INIAD卒業生と在学生全員をつなぎ、<br />
+          世界で活躍する支援をします。
+        </p>
+      </div>
+      <div class={styles.message}>
+        <HeadingText text="Profile" />
+        <p>
+          INIAD同窓会「INIALUM」<br />
+          (正式名称: 東洋大学赤羽台キャンパスINIAD同窓会「INIALUM」)
+        </p>
+        <p>Email: contact@inialum.org</p>
+      </div>
+    </section>
+  </main>
+</Layout>
