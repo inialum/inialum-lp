@@ -35,8 +35,8 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
     "@inialum/eslint-config": "^1.2.0",
-    "@inialum/memories-css": "0.1.1",
-    "@inialum/memories-react": "0.1.1",
+    "@inialum/memories-css": "0.3.0",
+    "@inialum/memories-react": "0.3.0",
     "@storybook/addon-a11y": "^8.0.8",
     "@storybook/addon-essentials": "^8.0.8",
     "@storybook/addon-interactions": "^8.0.8",
