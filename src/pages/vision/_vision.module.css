@@ -6,7 +6,7 @@
   @apply h-[720px] md:h-[848px] relative;
 
   &::after {
-    @apply absolute inset-0	w-full h-full z-10;
+    @apply absolute inset-0 w-full h-full z-10;
 
     content: '';
     background: linear-gradient(
@@ -18,7 +18,7 @@
 }
 
 .headlineImage {
-  @apply object-cover	w-full h-full relative;
+  @apply object-cover w-full h-full relative;
 }
 
 .headlineContent {
