@@ -24,6 +24,7 @@
     "typescript",
     "typescriptreact"
   ],
+  "prettier.documentSelectors": ["**/*.astro"],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "typescript.referencesCodeLens.enabled": true,
