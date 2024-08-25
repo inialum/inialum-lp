@@ -39,7 +39,7 @@
 }
 
 .aboutUs {
-  @apply flex flex-col items-start justify-center gap-y-56 px-20 py-42 mx-auto max-w-[470px] md:max-w-[580px];
+  @apply flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-[470px] md:max-w-[580px];
 
   font-size: 14px;
 }
