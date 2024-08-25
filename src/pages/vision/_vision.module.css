@@ -38,24 +38,6 @@
   }
 }
 
-.headlineCopyText2 {
-  @apply text-end;
-}
-
-.entryFromLinkButton {
-  @apply font-bold;
-}
-
-.campusImageWrapper {
-  @apply flex justify-center bg-primary;
-
-  padding: 32px 32px 0 0;
-}
-
-.campusImage {
-  @apply object-cover	w-full sm:w-[800px] sm:h-[413px];
-}
-
 .aboutUs {
   @apply flex flex-col items-start justify-center mx-auto max-w-[470px] md:max-w-[580px];
 
