@@ -21,7 +21,7 @@ import Layout from '@/layouts/Layout.astro'
         <div class={styles.headlineCopy}>私たちの思い</div>
       </div>
     </div>
-    <section class={styles.aboutUs}>
+    <section class={styles.content}>
       <div>
         <HeadingText text="Vision" />
         <p class={styles.visionText}>
@@ -83,7 +83,9 @@ import Layout from '@/layouts/Layout.astro'
         <HeadingText text="Profile" />
         <p>
           INIAD同窓会「INIALUM」<br />
-          (正式名称: 東洋大学赤羽台キャンパスINIAD同窓会「INIALUM」)
+          <span class={styles.officialName}>
+            (正式名称: 東洋大学赤羽台キャンパスINIAD同窓会「INIALUM」)
+          </span>
         </p>
         <p>Email: contact@inialum.org</p>
       </div>

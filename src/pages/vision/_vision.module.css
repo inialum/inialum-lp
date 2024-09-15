@@ -38,7 +38,7 @@
   }
 }
 
-.aboutUs {
+.content {
   @apply flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-[470px] md:max-w-[580px];
 
   font-size: 14px;
@@ -63,4 +63,8 @@
 
   row-gap: 28px;
   line-height: 2;
+}
+
+.officialName {
+  font-size: 10px;
 }
