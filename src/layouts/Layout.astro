@@ -1,15 +1,14 @@
 ---
-import { Footer } from '@inialum/memories-react'
+import { Footer, Header } from '@inialum/memories-react'
 
 import styles from './Layout.module.css'
 
 import BottomPanel from '@/components/common/BottomPanel/BottomPanel.astro'
-import Header from '@/components/common/Header/Header.astro'
 import '@/styles/tailwind.css'
 import '@/styles/global.css'
 
 interface Props {
-  title: string
+	title: string
 }
 
 const { title } = Astro.props
@@ -18,54 +17,54 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL('/share.png', Astro.url)
 
 const DESCRIPTION =
-  'INIAD同窓会「INIALUM」は、唯一のINIAD公認の同窓会組織です。私たちは、INIAD卒業生と在学生全員をつなぎ、世界で活躍する支援をします。'
+	'INIAD同窓会「INIALUM」は、唯一のINIAD公認の同窓会組織です。私たちは、INIAD卒業生と在学生全員をつなぎ、世界で活躍する支援をします。'
 ---
 
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <meta name="format-detection" content="telephone=no, email=no" />
-    <meta name="theme-color" content="#00b0eb" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="theme-color" content="#00b0eb" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
-    <title>{title}</title>
-    <link rel="canonical" href={canonicalURL} />
-    <meta name="description" content={DESCRIPTION} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={DESCRIPTION} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="generator" content={Astro.generator} />
-  </head>
-  <body>
-    <Header />
-    <h1 class={styles.visuallyHiddenTitle}>{title}</h1>
+		<title>{title}</title>
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="description" content={DESCRIPTION} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={DESCRIPTION} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={socialImageURL} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<Header client:load />
+		<h1 class={styles.visuallyHiddenTitle}>{title}</h1>
 
-    <div class={styles.outerContainer}>
-      <div class={styles.sideTextContainer}>
-        <div class={styles.sideText} aria-hidden="true">
-          INIALUM - INIAD Alumni Meetings
-        </div>
-      </div>
+		<div class={styles.outerContainer}>
+			<div class={styles.sideTextContainer}>
+				<div class={styles.sideText} aria-hidden="true">
+					INIALUM - INIAD Alumni Meetings
+				</div>
+			</div>
 
-      <div class={styles.innerContainer}>
-        <slot />
-      </div>
-    </div>
+			<div class={styles.innerContainer}>
+				<slot />
+			</div>
+		</div>
 
-    <BottomPanel />
-    <Footer />
-  </body>
+		<BottomPanel />
+		<Footer />
+	</body>
 </html>

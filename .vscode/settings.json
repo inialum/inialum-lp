@@ -1,35 +1,34 @@
 {
-  "cSpell.words": [
-    "astro",
-    "astrojs",
-    "clsx",
-    "Hono",
-    "INIAD",
-    "INIALUM",
-    "Miniflare",
-    "noindex",
-    "nosniff",
-    "openapi",
-    "tsconfigs"
-  ],
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact"
-  ],
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "typescript.referencesCodeLens.enabled": true,
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "editor.quickSuggestions": {
-    "strings": "on"
-  }
+	"cSpell.words": [
+		"astro",
+		"astrojs",
+		"clsx",
+		"Hono",
+		"INIAD",
+		"INIALUM",
+		"Miniflare",
+		"noindex",
+		"nosniff",
+		"openapi",
+		"tailwindcss",
+		"tsconfigs"
+	],
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.importModuleSpecifierEnding": "minimal",
+	"typescript.referencesCodeLens.enabled": true,
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	}
 }
