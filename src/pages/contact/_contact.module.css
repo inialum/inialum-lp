@@ -1,56 +1,56 @@
 .main {
-  @apply text-base-BLACK;
+	@apply text-base-BLACK;
 }
 
 .headline {
-  @apply h-[720px] md:h-[848px] relative;
+	@apply h-[720px] md:h-[848px] relative;
 
-  &::after {
-    @apply absolute inset-0 w-full h-full z-10;
+	&::after {
+		@apply absolute inset-0 w-full h-full z-10;
 
-    content: '';
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.54) 100%
-    );
-  }
+		content: "";
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(0, 0, 0, 0.54) 100%
+		);
+	}
 }
 
 .headlineImage {
-  @apply object-cover w-full h-full relative;
+	@apply object-cover w-full h-full relative;
 }
 
 .headlineContent {
-  @apply absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto;
+	@apply absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto;
 
-  max-width: 470px;
-  padding: 0 40px 64px;
+	max-width: 470px;
+	padding: 0 40px 64px;
 }
 
 .headlineCopy {
-  @apply flex flex-col w-full text-base-WHITE font-bold;
+	@apply flex flex-col w-full text-base-WHITE font-bold;
 
-  font-size: 32px;
+	font-size: 32px;
 
-  @media (640px <= width) {
-    font-size: 56px;
-  }
+	@media (640px <= width) {
+		font-size: 56px;
+	}
 }
 
 .content {
-  @apply flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-[470px] md:max-w-[580px];
+	@apply flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-[470px] md:max-w-[580px];
 
-  font-size: 14px;
+	font-size: 14px;
 }
 
 .contact {
-  @apply flex flex-col break-keep;
+	@apply flex flex-col break-keep;
 
-  row-gap: 28px;
-  line-height: 2;
+	row-gap: 28px;
+	line-height: 2;
 }
 
 .officialName {
-  font-size: 10px;
+	font-size: 10px;
 }
