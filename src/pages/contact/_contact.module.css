@@ -38,27 +38,13 @@
 	}
 }
 
-.aboutUs {
+.content {
 	@apply flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-[470px] md:max-w-[580px];
 
 	font-size: 14px;
 }
 
-.visionText {
-	@apply font-bold break-keep pt-24;
-
-	font-size: 22px;
-	line-height: 1.7;
-}
-
-.missionText {
-	@apply font-bold break-keep pt-24;
-
-	font-size: 18px;
-	line-height: 1.7;
-}
-
-.message {
+.contact {
 	@apply flex flex-col break-keep;
 
 	row-gap: 28px;

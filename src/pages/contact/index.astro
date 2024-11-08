@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets'
+
+import styles from './_contact.module.css'
+
+import iniadWallImage from '@/assets/images/other/iniad_wall.jpg'
+import HeadingText from '@/components/common/HeadingText/HeadingText.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="お問い合わせ | INIAD同窓会「INIALUM」">
+	<main class={styles.main}>
+		<div class={styles.headline}>
+			<Image
+				src={iniadWallImage}
+				alt=""
+				class={styles.headlineImage}
+				quality="medium"
+			/>
+			<div class={styles.headlineContent}>
+				<div class={styles.headlineCopy}>お問い合わせ</div>
+			</div>
+		</div>
+		<section class={styles.content}>
+			<div class={styles.contact}>
+				<HeadingText text="Contact" />
+				<p>
+					INIAD同窓会「INIALUM」<br />
+					<span class={styles.officialName}>
+						(正式名称: 東洋大学赤羽台キャンパスINIAD同窓会「INIALUM」)
+					</span>
+				</p>
+				<p>Email: contact@inialum.org</p>
+			</div>
+		</section>
+	</main>
+</Layout>
