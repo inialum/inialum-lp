@@ -1,44 +1,44 @@
 .bottomPanel {
-  @apply flex flex-col w-full;
+	@apply flex flex-col w-full;
 }
 
 .entryFormPanel {
-  @apply bg-primary w-full pt-68 px-0 pb-32;
+	@apply bg-primary w-full pt-68 px-0 pb-32;
 }
 
 .entryFormPanelContent {
-  @apply flex flex-col mx-auto max-w-[470px];
+	@apply flex flex-col mx-auto max-w-[470px];
 }
 
 .streetImage {
-  @apply flex justify-end min-[470px]:justify-center min-[470px]:pt-0 min-[470px]:px-0 min-[470px]:pb-72 pt-0 pr-0 pb-72 pl-36 ;
+	@apply flex justify-end min-[470px]:justify-center min-[470px]:pt-0 min-[470px]:px-0 min-[470px]:pb-72 pt-0 pr-0 pb-72 pl-36;
 }
 
 .copy {
-  @apply flex flex-col text-white min-[470px]:pt-0 min-[470px]:px-56 min-[470px]:pb-64 gap-y-24 pt-0 px-36 pb-64;
+	@apply flex flex-col text-white min-[470px]:pt-0 min-[470px]:px-56 min-[470px]:pb-64 gap-y-24 pt-0 px-36 pb-64;
 }
 
 .copySecondLine {
-  @apply text-end;
+	@apply text-end;
 }
 
 .copyStrong {
-  @apply text-2xl py-0 px-4;
+	@apply text-2xl py-0 px-4;
 }
 
 .entryFormLink {
-  @apply py-0 px-52;
+	@apply py-0 px-52;
 }
 
 .entryFormLinkButton {
-  @apply font-bold;
+	@apply font-bold;
 }
 
 .linksPanel {
-  @apply flex flex-col w-full mx-auto gap-y-24 py-72 px-52 max-w-[470px];
+	@apply flex flex-col w-full mx-auto gap-y-24 py-72 px-52 max-w-[470px];
 }
 
 .faqLinkButton,
 .contactLinkButton {
-  @apply font-bold;
+	@apply font-bold;
 }

@@ -1,5 +1,5 @@
 .heading {
-  @apply font-bold text-base-BLACK border-b-4 border-solid border-primary w-fit;
+	@apply font-bold text-base-BLACK border-b-4 border-solid border-primary w-fit;
 
-  font-size: 12px;
+	font-size: 12px;
 }
