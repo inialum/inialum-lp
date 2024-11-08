@@ -34,8 +34,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@cloudflare/workers-types": "^4.20240821.1",
-		"@inialum/memories-css": "0.3.0",
-		"@inialum/memories-react": "0.3.0",
+		"@inialum/memories-css": "0.3.2",
+		"@inialum/memories-react": "0.4.0",
 		"@storybook/addon-a11y": "^8.2.9",
 		"@storybook/addon-essentials": "^8.2.9",
 		"@storybook/addon-interactions": "^8.2.9",
