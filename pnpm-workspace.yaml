@@ -1,0 +1,8 @@
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+- '@inialum/*'
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - esbuild
+  - sharp
+  - workerd
