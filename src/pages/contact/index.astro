@@ -1,32 +1,39 @@
 ---
 import { Image } from 'astro:assets'
-
-import styles from './_contact.module.css'
-
-import iniadWallImage from '@/assets/images/other/iniad_wall.jpg'
-import HeadingText from '@/components/common/HeadingText/HeadingText.astro'
-import Layout from '@/layouts/Layout.astro'
+import iniadWallImage from '../../assets/images/other/iniad_wall.jpg'
+import HeadingText from '../../components/common/HeadingText/HeadingText.astro'
+import Layout from '../../layouts/Layout.astro'
 ---
 
 <Layout title="お問い合わせ | INIAD同窓会「INIALUM」">
-	<main class={styles.main}>
-		<div class={styles.headline}>
+	<main class="text-base-black">
+		<div
+			class="h-720 md:h-848 relative after:absolute after:inset-0 after:w-full after:h-full after:z-10 after:bg-linear-to-b after:from-transparent after:to-[rgba(0,0,0,0.54)]"
+		>
 			<Image
 				src={iniadWallImage}
 				alt=""
-				class={styles.headlineImage}
+				class="object-cover w-full h-full relative"
 				quality="medium"
 			/>
-			<div class={styles.headlineContent}>
-				<div class={styles.headlineCopy}>お問い合わせ</div>
+			<div
+				class="absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto max-w-470 px-10 pb-16"
+			>
+				<div
+					class="flex flex-col w-full text-base-white font-bold text-[32px] sm:text-[56px]"
+				>
+					お問い合わせ
+				</div>
 			</div>
 		</div>
-		<section class={styles.content}>
-			<div class={styles.contact}>
+		<section
+			class="flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-470 md:max-w-580 text-[14px]"
+		>
+			<div class="flex flex-col break-keep gap-y-7 leading-loose">
 				<HeadingText text="Contact" />
 				<p>
 					INIAD同窓会「INIALUM」<br />
-					<span class={styles.officialName}>
+					<span class="text-[10px]">
 						(正式名称: 東洋大学赤羽台キャンパスINIAD同窓会「INIALUM」)
 					</span>
 				</p>

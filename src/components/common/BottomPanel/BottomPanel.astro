@@ -1,50 +1,51 @@
 ---
-import { Image } from 'astro:assets'
 import { ButtonLink } from '@inialum/memories-react'
 
-import { INIALUM_ENTRY_FORM_LINK } from '@/constants/links'
-
-import styles from './BottomPanel.module.css'
-
-import streetImage from '@/assets/images/common/akabanedai_street.jpg'
+import { Image } from 'astro:assets'
+import streetImage from '../../../assets/images/common/akabanedai_street.jpg'
+import { INIALUM_ENTRY_FORM_LINK } from '../../../constants/links'
 ---
 
-<div class={styles.bottomPanel}>
-	<div class={styles.entryFormPanel}>
-		<div class={styles.entryFormPanelContent}>
-			<div class={styles.streetImage}>
+<div class="flex flex-col w-full">
+	<div class="bg-primary w-full pt-68 px-0 pb-32">
+		<div class="flex flex-col mx-auto max-w-470">
+			<div
+				class="flex justify-end min-470:justify-center min-470:pt-0 min-470:px-0 min-470:pb-72 pt-0 pr-0 pb-72 pl-36"
+			>
 				<Image
 					src={streetImage}
 					alt="INIALUM - INIAD Alumni Meetings"
 					quality="low"
 				/>
 			</div>
-			<div class={styles.copy}>
+			<div
+				class="flex flex-col text-white min-470:pt-0 min-470:px-56 min-470:pb-64 gap-y-24 pt-0 px-36 pb-64"
+			>
 				<p>さあ、あなたも、ともに歩んだ仲間と</p>
-				<p class={styles.copySecondLine}>
-					もう一度<span class={styles.copyStrong}>"連携"</span>しませんか？
+				<p class="text-end">
+					もう一度<span class="text-2xl py-0 px-4">"連携"</span>しませんか？
 				</p>
 			</div>
-			<div class={styles.entryFormLink}>
+			<div class="py-0 px-52">
 				<ButtonLink
 					href={INIALUM_ENTRY_FORM_LINK}
 					colorTheme="white"
 					size="fullWidth"
-					className={styles.entryFormLinkButton}
+					className="font-bold"
 				>
 					入会する
 				</ButtonLink>
 			</div>
 		</div>
 	</div>
-	<div class={styles.linksPanel}>
+	<div class="flex flex-col w-full mx-auto gap-y-24 py-72 px-52 max-w-470">
 		<ButtonLink
 			href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
 			target="_blank"
 			colorTheme="primary"
 			styleType="outlined"
 			size="fullWidth"
-			className={styles.faqLinkButton}
+			className="font-bold"
 		>
 			Q&A
 		</ButtonLink>
@@ -54,7 +55,7 @@ import streetImage from '@/assets/images/common/akabanedai_street.jpg'
 			colorTheme="primary"
 			styleType="outlined"
 			size="fullWidth"
-			className={styles.contactLinkButton}
+			className="font-bold"
 		>
 			お問い合わせ
 		</ButtonLink>

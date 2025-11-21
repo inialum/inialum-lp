@@ -1,37 +1,16 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
 import react from '@astrojs/react'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
 	site: 'https://inialum.org',
 	trailingSlash: 'never',
-	integrations: [
-		react(),
-		tailwind({
-			applyBaseStyles: false,
-		}),
-	],
+	integrations: [react()],
 	i18n: {
 		defaultLocale: 'ja',
 		locales: ['ja', 'en'],
 	},
 	vite: {
-		resolve: {
-			alias: [
-				{
-					find: '@Root',
-					replacement: resolve(__dirname, '.'),
-				},
-				{
-					find: '@',
-					replacement: resolve(__dirname, './src'),
-				},
-			],
-		},
+		plugins: [tailwindcss()],
 	},
 })
