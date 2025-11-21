@@ -1,11 +1,9 @@
 ---
 import { Footer, Header } from '@inialum/memories-react'
 
-import styles from './Layout.module.css'
-
-import BottomPanel from '@/components/common/BottomPanel/BottomPanel.astro'
-import '@/styles/tailwind.css'
-import '@/styles/global.css'
+import BottomPanel from '../components/common/BottomPanel/BottomPanel.astro'
+import '../styles/tailwind.css'
+import '../styles/global.css'
 
 interface Props {
 	title: string
@@ -46,20 +44,22 @@ const DESCRIPTION =
 		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:image" content={socialImageURL} />
 		<meta name="twitter:card" content="summary" />
-		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
 		<Header client:load />
-		<h1 class={styles.visuallyHiddenTitle}>{title}</h1>
+		<h1 class="sr-only">{title}</h1>
 
-		<div class={styles.outerContainer}>
-			<div class={styles.sideTextContainer}>
-				<div class={styles.sideText} aria-hidden="true">
+		<div class="bg-primary relative pl-9">
+			<div class="absolute top-0 left-0 pt-[calc(100vh-136px)] pl-2">
+				<div
+					class="text-base-white text-xs origin-bottom-left -rotate-90 translate-y-full"
+					aria-hidden="true"
+				>
 					INIALUM - INIAD Alumni Meetings
 				</div>
 			</div>
 
-			<div class={styles.innerContainer}>
+			<div class="bg-base-white">
 				<slot />
 			</div>
 		</div>

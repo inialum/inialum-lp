@@ -1,3 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@inialum/memories-tailwind-theme";
+
+@source "../../node_modules/@inialum/memories-react";
