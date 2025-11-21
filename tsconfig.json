@@ -3,12 +3,7 @@
 	"compilerOptions": {
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
-		"skipLibCheck": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./src/*"],
-			"@Root/*": ["./*"]
-		}
+		"skipLibCheck": true
 	},
 	"include": ["src", ".storybook/**/*.ts", ".storybook/**/*.tsx"],
 	"exclude": ["node_modules", "dist"],
