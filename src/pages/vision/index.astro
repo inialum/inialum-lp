@@ -1,37 +1,44 @@
 ---
 import { Image } from 'astro:assets'
-
-import styles from './_vision.module.css'
-
-import iniadWallImage from '@/assets/images/other/iniad_wall.jpg'
-import HeadingText from '@/components/common/HeadingText/HeadingText.astro'
-import Layout from '@/layouts/Layout.astro'
+import iniadWallImage from '../../assets/images/other/iniad_wall.jpg'
+import HeadingText from '../../components/common/HeadingText/HeadingText.astro'
+import Layout from '../../layouts/Layout.astro'
 ---
 
 <Layout title="私たちの思い | INIAD同窓会「INIALUM」">
-	<main class={styles.main}>
-		<div class={styles.headline}>
+	<main class="text-base-black">
+		<div
+			class="h-720 md:h-848 relative after:absolute after:inset-0 after:w-full after:h-full after:z-10 after:bg-linear-to-b after:from-transparent after:to-[rgba(0,0,0,0.54)]"
+		>
 			<Image
 				src={iniadWallImage}
 				alt=""
-				class={styles.headlineImage}
+				class="object-cover w-full h-full relative"
 				quality="medium"
 			/>
-			<div class={styles.headlineContent}>
-				<div class={styles.headlineCopy}>私たちの思い</div>
+			<div
+				class="absolute left-0 right-0 bottom-0 flex flex-col items-center justify-center z-20 mx-auto max-w-470 px-10 pb-16"
+			>
+				<div
+					class="flex flex-col w-full text-base-white font-bold text-[32px] sm:text-[56px]"
+				>
+					私たちの思い
+				</div>
 			</div>
 		</div>
-		<section class={styles.aboutUs}>
+		<section
+			class="flex flex-col items-start justify-center gap-y-56 px-20 py-64 mx-auto max-w-470 md:max-w-580 text-[14px]"
+		>
 			<div>
 				<HeadingText text="Vision" />
-				<p class={styles.visionText}>
+				<p class="font-bold break-keep pt-24 text-[22px] leading-[1.7]">
 					ともに歩んだ仲間と、<wbr />
 					さらなる連携をつくる
 				</p>
 			</div>
 			<div>
 				<HeadingText text="Mission" />
-				<p class={styles.missionText}>
+				<p class="font-bold break-keep pt-24 text-lg leading-[1.7]">
 					INIAD卒業生のつながりをつくり、<wbr />
 					世界で活躍する足がかりを築く
 				</p>
@@ -39,30 +46,38 @@ import Layout from '@/layouts/Layout.astro'
 			<div>
 				<HeadingText text="Values" />
 				<p>
-					<div class={styles.visionText}>つながりをつくる</div>
+					<div class="font-bold break-keep pt-24 text-[22px] leading-[1.7]">
+						つながりをつくる
+					</div>
 					卒業生同士のつながりを維持しさらに発展させる<br />
 					INIADとの接点を持ち続けられるようにする<br />
 					卒業生と在学生のつながりをつくる
 				</p>
 				<p class="value-text">
-					<div class={styles.visionText}>みえるようにする</div>
+					<div class="font-bold break-keep pt-24 text-[22px] leading-[1.7]">
+						みえるようにする
+					</div>
 					卒業生を在学生から可視化し、<wbr />
 					在学生のロールモデルをつくる<br />
 					卒業生がINIADの現状を知れるようにする
 				</p>
 				<p class="value-text">
-					<div class={styles.visionText}>キャリアを支援する</div>
+					<div class="font-bold break-keep pt-24 text-[22px] leading-[1.7]">
+						キャリアを支援する
+					</div>
 					卒業生にキャリアを求められる場所を提供する<br />
 					INIAD在学生がキャリアにおいて、<wbr />
 					卒業生とつながれるようにする
 				</p>
 				<p class="value-text">
-					<div class={styles.visionText}>活動を支援する</div>
+					<div class="font-bold break-keep pt-24 text-[22px] leading-[1.7]">
+						活動を支援する
+					</div>
 					卒業生の仲間集めを助ける<br />
 					卒業生の経験をINIADに還元する
 				</p>
 			</div>
-			<div class={styles.message}>
+			<div class="flex flex-col break-keep gap-y-7 leading-loose">
 				<HeadingText text="About" />
 				<p>
 					INIAD同窓会「INIALUM」は、<wbr />
@@ -79,7 +94,7 @@ import Layout from '@/layouts/Layout.astro'
 					世界で活躍する支援をします。
 				</p>
 			</div>
-			<div class={styles.message}>
+			<div class="flex flex-col break-keep gap-y-7 leading-loose">
 				<HeadingText text="Profile" />
 				<p>
 					INIAD同窓会「INIALUM」<br />
