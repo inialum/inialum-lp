@@ -8,8 +8,6 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"pages:preview": "astro build && wrangler pages dev ./dist",
-		"pages:deploy": "if test \"$IS_PRODUCTION_DEPLOY\" = \"true\" ; then astro build && wrangler pages deploy ./dist --project-name inialum-lp; else astro build && wrangler pages deploy ./dist --project-name inialum-lp-staging --branch main; fi",
 		"lint": "pnpm run biome:check && pnpm run prettier:check",
 		"fix": "pnpm run biome:fix && pnpm run prettier:fix",
 		"biome:check": "biome check",
