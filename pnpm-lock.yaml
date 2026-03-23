@@ -14,9 +14,6 @@ importers:
       '@astrojs/react':
         specifier: ^4.4.2
         version: 4.4.2(@types/node@24.10.1)(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(yaml@2.8.1)
-      '@inialum/memories-tailwind-theme':
-        specifier: ^1.0.0
-        version: 1.0.0(tailwindcss@4.1.17)
       '@tailwindcss/vite':
         specifier: ^4.1.17
         version: 4.1.17(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))
@@ -48,12 +45,12 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20251120.0
         version: 4.20251120.0
-      '@inialum/memories-css':
-        specifier: 0.3.2
-        version: 0.3.2(tailwindcss@4.1.17)
       '@inialum/memories-react':
-        specifier: 1.0.0
-        version: 1.0.0(@inialum/memories-tailwind-theme@1.0.0(tailwindcss@4.1.17))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(tailwindcss@4.1.17)
+        specifier: 1.0.2
+        version: 1.0.2(@inialum/memories-tailwind-theme@1.0.1(tailwindcss@4.1.17))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(tailwindcss@4.1.17)
+      '@inialum/memories-tailwind-theme':
+        specifier: ^1.0.1
+        version: 1.0.1(tailwindcss@4.1.17)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -914,23 +911,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@inialum/memories-css@0.3.2':
-    resolution: {integrity: sha512-MPifO1RN/QU2Gt+6K/MWQpXIHFTD5zHCR/UytCMbLVI1DQvT0dpwgGcmn0JwQRG5/hII/XsowYm7zcdH8DVcQw==}
+  '@inialum/memories-react@1.0.2':
+    resolution: {integrity: sha512-+Y6cmQ0ZFi8vluZULMcdumbEnSvVY7cir9wMqNxhsNivo4/sxT2oIarjql1j7fozwdqyrOVlO/zZwhp+6LewIA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      tailwindcss: '>= 3.0.0'
-
-  '@inialum/memories-react@1.0.0':
-    resolution: {integrity: sha512-PXLvP5hzJRSVkyH5xF0FKFSPxwJkKt/xUTFzsF9Ttgax2SdjUkR07a9QGTmusgsfgZ2XLqAub/4ovbY6g+HErg==}
-    engines: {node: '>=20.0.0'}
-    peerDependencies:
-      '@inialum/memories-tailwind-theme': '>=1.0.0'
+      '@inialum/memories-tailwind-theme': '>=1.0.1'
       react: '>= 19.0.0'
       react-dom: '>= 19.0.0'
       tailwindcss: '>= 4.0.0'
 
-  '@inialum/memories-tailwind-theme@1.0.0':
-    resolution: {integrity: sha512-teuYRSgLY7kb3NDzzggV2KvIjXYp8EqQVoQ16z21bxeA4yvSA+7/KNn+ZA5O54aWZ8XG+RVL/m8wJyQqVIvDWQ==}
+  '@inialum/memories-tailwind-theme@1.0.1':
+    resolution: {integrity: sha512-DLJCS7FCbt1loeUgXi5n/8E+cV2gKX46tA5/EfRe6KHijZk7bCFghV6G6bK6y2+6pPQEwO5s9jRcPbNq6B74cQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       tailwindcss: '>= 4.0.0'
@@ -2245,8 +2236,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-remove-scroll@2.7.1:
-    resolution: {integrity: sha512-HpMh8+oahmIdOuS5aFKKY6Pyog+FNaZV/XyJOq7b4YFwsFHe5yYfdbIalI4k3vU2nSDql7YskmUseHsRrJqIPA==}
+  react-remove-scroll@2.7.2:
+    resolution: {integrity: sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==}
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': '*'
@@ -3548,22 +3539,18 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@inialum/memories-css@0.3.2(tailwindcss@4.1.17)':
+  '@inialum/memories-react@1.0.2(@inialum/memories-tailwind-theme@1.0.1(tailwindcss@4.1.17))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(tailwindcss@4.1.17)':
     dependencies:
-      tailwindcss: 4.1.17
-
-  '@inialum/memories-react@1.0.0(@inialum/memories-tailwind-theme@1.0.0(tailwindcss@4.1.17))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(tailwindcss@4.1.17)':
-    dependencies:
-      '@inialum/memories-tailwind-theme': 1.0.0(tailwindcss@4.1.17)
+      '@inialum/memories-tailwind-theme': 1.0.1(tailwindcss@4.1.17)
       clsx: 2.1.1
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      react-remove-scroll: 2.7.1(@types/react@19.2.6)(react@19.2.0)
+      react-remove-scroll: 2.7.2(@types/react@19.2.6)(react@19.2.0)
       tailwindcss: 4.1.17
     transitivePeerDependencies:
       - '@types/react'
 
-  '@inialum/memories-tailwind-theme@1.0.0(tailwindcss@4.1.17)':
+  '@inialum/memories-tailwind-theme@1.0.1(tailwindcss@4.1.17)':
     dependencies:
       tailwindcss: 4.1.17
 
@@ -5113,7 +5100,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.6
 
-  react-remove-scroll@2.7.1(@types/react@19.2.6)(react@19.2.0):
+  react-remove-scroll@2.7.2(@types/react@19.2.6)(react@19.2.0):
     dependencies:
       react: 19.2.0
       react-remove-scroll-bar: 2.3.8(@types/react@19.2.6)(react@19.2.0)
