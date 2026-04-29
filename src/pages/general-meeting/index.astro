@@ -21,9 +21,7 @@ const documentsByYear = Object.entries(
 		([year, documents]) =>
 			[
 				year,
-				documents.sort((left, right) =>
-					right.slug.localeCompare(left.slug),
-				),
+				documents.sort((left, right) => right.slug.localeCompare(left.slug)),
 			] as const,
 	)
 	.sort(([leftYear], [rightYear]) => Number(rightYear) - Number(leftYear))
