@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.json",
+	"include": [
+		"astro.config.ts",
+		"tailwind.config.ts",
+		".storybook/**/*.ts",
+		".storybook/**/*.tsx",
+		"src/**/*.ts",
+		"src/**/*.tsx"
+	],
+	"exclude": ["node_modules", "dist", "src/**/*.astro"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
