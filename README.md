@@ -6,7 +6,7 @@ Official website for INIALUM
 
 > [!NOTE]
 >
-> - This project uses Astro. You can read the documentation [here](https://docs.astro.build).
+> - This project uses Astro 7 and Vite Plus. You can read the Astro documentation [here](https://docs.astro.build).
 
 ### Setup
 
@@ -14,14 +14,24 @@ Official website for INIALUM
 2. Install dependencies
 
    ```shell
-   pnpm install
+   vp install
    ```
 
 3. Run the development server
 
    ```shell
-   pnpm run dev
+   vp run dev
    ```
+
+### Validation
+
+```shell
+vp run lint
+vp run typecheck
+vp run build
+```
+
+Oxfmt and Oxlint handle JavaScript, TypeScript, styles, and configuration files. Astro files remain formatted with Prettier and checked with `astro check`; TypeScript Go checks the remaining TypeScript sources through Vite Plus.
 
 ## License
 
