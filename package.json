@@ -1,5 +1,5 @@
 {
-	"name": "inialum-lp",
+	"name": "@inialum/lp",
 	"private": true,
 	"license": "Apache-2.0",
 	"type": "module",
