@@ -25,12 +25,16 @@ export default defineConfig({
 		tasks: {
 			build: {
 				command: ['astro check', 'astro build'],
-				input: [{ auto: true }, '!.astro', '!.astro/**', '!dist', '!dist/**'],
-				output: ['.astro/**', 'dist/**'],
+				cache: {
+					input: [{ auto: true }, '!.astro', '!.astro/**', '!dist', '!dist/**'],
+					output: ['.astro/**', 'dist/**'],
+				},
 			},
 			typecheck: {
 				command: 'vp check --no-fmt --no-lint',
-				input: [{ auto: true }, '!.astro', '!.astro/**'],
+				cache: {
+					input: [{ auto: true }, '!.astro', '!.astro/**'],
+				},
 			},
 		},
 	},
